@@ -32,8 +32,13 @@ public class App {
         cpfs.add(new CPF("123.123.123-2411"));
 
         System.out.println();
+//        for (CPF cpf : cpfs) {
+//            if(Valicao.validarTamanho(cpf)) cpfsValidos.add(cpf);
+//            else cpfsInvalidos.add(cpf);
+//        }
+
         for (CPF cpf : cpfs) {
-            if(Valicao.validarTamanho(cpf.getCpf())) cpfsValidos.add(cpf);
+            if(Valicao.validarNumerico(cpf)) cpfsValidos.add(cpf);
             else cpfsInvalidos.add(cpf);
         }
 
