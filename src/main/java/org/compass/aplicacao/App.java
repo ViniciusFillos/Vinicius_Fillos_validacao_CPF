@@ -31,28 +31,27 @@ public class App {
         cpfs.add(new CPF("123.123.123-2"));
         cpfs.add(new CPF("123.123.123-2411"));
 
-        System.out.println();
 //        for (CPF cpf : cpfs) {
 //            if(Valicao.validarTamanho(cpf)) cpfsValidos.add(cpf);
 //            else cpfsInvalidos.add(cpf);
 //        }
 
+//        for (CPF cpf : cpfs) {
+//            if(Valicao.validarNumerico(cpf)) cpfsValidos.add(cpf);
+//            else cpfsInvalidos.add(cpf);
+//        }
+
         for (CPF cpf : cpfs) {
-            if(Valicao.validarNumerico(cpf)) cpfsValidos.add(cpf);
+            if(Valicao.validarTamanhoLimpo(cpf)) cpfsValidos.add(cpf);
             else cpfsInvalidos.add(cpf);
         }
 
-        System.out.println("--------------------");
+        System.out.println("\n--------------------");
         System.out.println("CPF's Inválidos");
-        for (CPF cpf : cpfsInvalidos) {
-            System.out.println(cpf);
-        }
+        cpfsInvalidos.forEach(System.out::println);
 
-        System.out.println();
-        System.out.println("--------------------");
+        System.out.println("\n--------------------");
         System.out.println("CPF's Válidos");
-        for (CPF cpf : cpfsValidos) {
-            System.out.println(cpf);
-        }
+        cpfsValidos.forEach(System.out::println);
     }
 }

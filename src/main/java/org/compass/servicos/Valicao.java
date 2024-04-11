@@ -18,4 +18,10 @@ public class Valicao {
         }
         return flag;
     }
+
+    public static boolean validarTamanhoLimpo(CPF cpf){
+        cpf.setCpf(cpf.getCpf().replace(".", ""));
+        cpf.setCpf(cpf.getCpf().replace("-", ""));
+        return Valicao.validarTamanho(cpf);
+    }
 }

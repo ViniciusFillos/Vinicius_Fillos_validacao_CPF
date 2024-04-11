@@ -11,6 +11,10 @@ public class CPF {
         return cpf;
     }
 
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
     @Override
     public String toString() {
         return "CPF: "+ cpf;
