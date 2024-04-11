@@ -20,8 +20,9 @@ public class Valicao {
     }
 
     public static boolean validarTamanhoLimpo(CPF cpf){
-        cpf.setCpf(cpf.getCpf().replace(".", ""));
-        cpf.setCpf(cpf.getCpf().replace("-", ""));
-        return Valicao.validarTamanho(cpf);
+        CPF aux = new CPF(cpf.getCpf());
+        aux.setCpf(aux.getCpf().replace(".", ""));
+        aux.setCpf(aux.getCpf().replace("-", ""));
+        return Valicao.validarTamanho(aux);
     }
 }
