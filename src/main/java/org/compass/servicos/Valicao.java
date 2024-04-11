@@ -9,9 +9,12 @@ public class Valicao {
     }
 
     public static boolean validarNumerico(CPF cpf){
+        CPF aux = new CPF(cpf.getCpf());
+        aux.setCpf(aux.getCpf().replace("-", ""));
+        aux.setCpf(aux.getCpf().replace(".", ""));
         boolean flag;
         try {
-            long iscpf = Long.parseLong(cpf.getCpf());
+            long iscpf = Long.parseLong(aux.getCpf());
             flag = true;
         } catch (Exception e){
             flag = false;
