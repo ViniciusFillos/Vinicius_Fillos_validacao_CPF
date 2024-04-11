@@ -31,18 +31,9 @@ public class App {
         cpfs.add(new CPF("123.123.123-2"));
         cpfs.add(new CPF("123.123.123-2411"));
 
-//        for (CPF cpf : cpfs) {
-//            if(Valicao.validarTamanho(cpf)) cpfsValidos.add(cpf);
-//            else cpfsInvalidos.add(cpf);
-//        }
-
-//        for (CPF cpf : cpfs) {
-//            if(Valicao.validarNumerico(cpf)) cpfsValidos.add(cpf);
-//            else cpfsInvalidos.add(cpf);
-//        }
 
         for (CPF cpf : cpfs) {
-            if(Valicao.validarTamanhoLimpo(cpf)) cpfsValidos.add(cpf);
+            if(Valicao.validarTamanhoLimpo(cpf) && Valicao.validarNumerico(cpf)) cpfsValidos.add(cpf);
             else cpfsInvalidos.add(cpf);
         }
 
