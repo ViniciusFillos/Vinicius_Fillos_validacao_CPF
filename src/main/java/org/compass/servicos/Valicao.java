@@ -9,12 +9,10 @@ public class Valicao {
     }
 
     public static boolean validarNumerico(CPF cpf){
-        CPF aux = new CPF(cpf.getCpf());
-        aux.setCpf(aux.getCpf().replace("-", ""));
-        aux.setCpf(aux.getCpf().replace(".", ""));
+        CPF cpfLimpo = limparCpf(cpf);
         boolean flag;
         try {
-            long iscpf = Long.parseLong(aux.getCpf());
+            long cpfLong = Long.parseLong(cpfLimpo.getCpf());
             flag = true;
         } catch (Exception e){
             flag = false;
@@ -22,10 +20,10 @@ public class Valicao {
         return flag;
     }
 
-    public static boolean validarTamanhoLimpo(CPF cpf){
-        CPF aux = new CPF(cpf.getCpf());
-        aux.setCpf(aux.getCpf().replace(".", ""));
-        aux.setCpf(aux.getCpf().replace("-", ""));
-        return Valicao.validarTamanho(aux);
+    public static CPF limparCpf(CPF cpf){
+        CPF cpfLimpo = new CPF(cpf.getCpf());
+        cpfLimpo.setCpf(cpfLimpo.getCpf().replace(".", ""));
+        cpfLimpo.setCpf(cpfLimpo.getCpf().replace("-", ""));
+        return cpfLimpo;
     }
 }
