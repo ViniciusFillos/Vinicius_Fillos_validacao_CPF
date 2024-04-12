@@ -33,7 +33,7 @@ public class App {
 
 
         for (CPF cpf : cpfs) {
-            if(Valicao.validarTamanhoLimpo(cpf) && Valicao.validarNumerico(cpf)) cpfsValidos.add(cpf);
+            if(Valicao.validarTamanho(Valicao.limparCpf(cpf)) && Valicao.validarNumerico(Valicao.limparCpf(cpf))) cpfsValidos.add(cpf);
             else cpfsInvalidos.add(cpf);
         }
 
