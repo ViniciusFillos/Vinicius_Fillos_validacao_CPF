@@ -18,4 +18,7 @@ O repositório está organizado em duas principais ramificações (branches):
 - **test:** Adição ou correção de testes.
 ---
 
-Desafio feito com bastante discussões no time, sem dificuldades, muito graticificante!
+Mesmo após achar que o desafio estava concluído fazendo novos testes, novos bugs apareceram, e novas funcionalidades para serem implementadas, não são grandes problemas mais a cada implementação as anteriores precisam ser revisadas e levemente modificadas também.   
+Desafio feito com bastante discussões em time, mesmo sendo implementações pequenas deram até que bastante trabalhinho.
+
+    
